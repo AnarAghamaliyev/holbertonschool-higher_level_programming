@@ -1,11 +1,30 @@
-#!/usr/bin/python3
-"""Module containing print_sorted func"""
+>>> MyList = __import__('1-my_list').MyList
+>>> print_sorted = MyList.print_sorted
 
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.print_sorted()
+[1, 2, 4]
 
-class MyList(list):
-    """Class inherited from list class"""
+>>> my_list.clear()
+>>> my_list.print_sorted()
+[]
 
-    def print_sorted(self):
-        """Method to print sorted list"""
-        new_list = sorted(self)
-        print(new_list)
+>>> my_list.append(1)
+>>> my_list.append(-2)
+>>> my_list.print_sorted()
+[-2, 1]
+
+>>> my_list.clear()
+>>> my_list.append("salam")
+>>> my_list.append("1")
+>>> new_list = my_list.print_sorted()
+['1', 'salam']
+
+>>> print(new_list)
+None
+
+>>> print(my_list)
+['salam', '1']
